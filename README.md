@@ -8,4 +8,4 @@ Fitear densidad central, pendientes y posiciones de quiebre del perfil de densid
 densidad_bins.dat contiene: distancias [kpc], densidades [# kpc⁻3] y errores
 (calculados como sqrt(#de estrellas)/volumen)
 
-perfil 1 para fitear:     rho = rho_{sol}*(R/R_sol)^n  , con R_sol=8 kpc 
+perfil 1 para fitear:     rho = rho_{sol}*(R/R_{sol})^n  , con R_{sol}=8 kpc 
