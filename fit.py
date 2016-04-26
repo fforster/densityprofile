@@ -38,6 +38,7 @@ for i in p0s:
     ax.plot(rs, profile2(rs, popt[0], popt[1], popt[2], popt[3]), 'k', label = "Broken power law fit")
    
     print "Broken power law best-fitting parameters (rho0(r0=10), n0, r1, n1):", popt
+    print "Error estimates bases on covariance diagonal:", np.sqrt(np.diag(pcov))
 
 # fit simple power law
 (popt, pcov) = curve_fit(profile1, d, rho, sigma = e_rho, p0 = (0.3, -4))
