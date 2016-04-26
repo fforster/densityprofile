@@ -26,8 +26,6 @@ def profile2(r, rho0, r0, n0, r1, n1):
 # start plotting
 fig, ax = plt.subplots()
 ax.errorbar(d, rho, yerr = e_rho, label = "HiTS RR Lyrae")
-ax.set_yscale('log')
-ax.set_xscale('log')
 
 # try to find values manually to define initial iteration and then comment
 rs = np.linspace(12, 250, 100)
@@ -46,9 +44,11 @@ ax.plot(rs, profile1(rs, popt[0], popt[1], popt[2]), 'gray', label = "Simple pow
 print "Simple power law best-fitting parameters:", popt
 
 # save figure
+ax.set_yscale('log')
+ax.set_xscale('log')
 ax.set_xlim(10, 300)
 ax.set_xlabel("Distance [kpc]")
 ax.set_ylabel("Density [kpc^-3]")
-plt.legend(loc = 3)
-plt.savefig("out/fit.png")
+plt.legend(loc = 1)
+plt.savefig("bestfit.png")
 
